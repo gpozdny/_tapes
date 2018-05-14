@@ -1,0 +1,28 @@
+header.header
+    .container.container--column
+        .header__wrapper 
+            a(href="#").header__logo
+                include ../../images/pics/LogoBiopack.svg
+            nav.header__nav
+                ul.header__list
+                    li.header__item
+                        a(href="#").header__nav-link Продажа промышленных лент
+                    li.header__item
+                        a(href="#").header__nav-link Типы лент
+                    li.header__item
+                        a(href="#").header__nav-link Сфера применения
+                    li.header__item
+                        a(href="#").header__nav-link Блог
+            .header__info
+                .header__credentials
+                    a(href="tel:74957273377").header__phone +7 (495) 727-33-77 
+                    span.header__address г. Москва, ул. 2-ая Хуторская, 38А,стр.8
+                .header__lang
+                    a(href="#").header__lang-link RU
+                    a(href="").header__lang-link EN
+            .header__menu
+                .icon
+                .icon
+                .icon
+        include ../sections/desc.pug
+                

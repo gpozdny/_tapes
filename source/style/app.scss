@@ -1,0 +1,37 @@
+// vars
+
+$main-colour: #004C97;
+$main-white: #F9FAFC;
+$text-colour: black;
+$bottom-colour: #C4C9CD;
+$bg-colour: #EFF2F5;
+$stripe-colour: rgba(24, 24, 24, 0.1);
+
+// adjustments
+
+@import 'mixins.scss';
+@import 'adjustments.scss';
+
+
+// sections
+@import 'sections/header.scss';
+@import 'sections/desc.scss';
+@import 'sections/info.scss';
+@import 'sections/tape-types.scss';
+@import 'sections/contacts.scss';
+@import 'sections/quality.scss';
+@import 'sections/map.scss';
+@import 'sections/news.scss';
+@import 'sections/article.scss';
+@import 'sections/footer.scss';
+
+
+// fonts
+
+
+
+
+// modificators
+
+
+

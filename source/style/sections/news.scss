@@ -1,0 +1,20 @@
+.news {
+    position: relative;
+    padding-bottom: 50px;
+    &__heading {
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: $text-colour;
+        font-weight: normal;
+    }
+    &__btn {
+        margin-bottom: 20px;
+    }
+    &__list {
+        @include flex(row);
+    }
+    &__link {
+        display: block;
+    }
+}

@@ -1,0 +1,62 @@
+.tape-types {
+    position: relative;
+    overflow: hidden;
+    &__heading {
+        margin-bottom: 45px;
+    }
+    &__num {
+        display: none;
+    }
+    &__image {
+        &--typography {
+            margin-left: -38px;
+            width: 475px;
+        }
+        &--aviation {
+            width: 280px;
+        }
+        &--industrial {
+            width: 475px;
+            margin-left: -183px;
+        }
+        line-height: 0;
+    }
+    &__title {
+        &--adjusted {
+            margin-top: -85px;
+        }
+    }
+    &__link {
+        margin-bottom: 90px;
+    }
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: $text-colour;
+        margin-bottom: 20px;
+    }
+    &__info {
+        display: none;
+    }
+    &__list {
+        padding-left:20px;
+        margin-bottom: 40px;
+    }
+    &__item {
+        position: relative;
+        margin-bottom: 10px;
+        color: $text-colour;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: -15px;
+            top: 6px;
+            border-radius: 50%;
+            background-color: #3d2baa;
+        }
+    }
+}

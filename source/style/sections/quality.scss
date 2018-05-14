@@ -1,0 +1,14 @@
+.quality {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-color: #f6f6f6;
+    &__image {
+        display: none;
+    }
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: $text-colour;
+    }
+}

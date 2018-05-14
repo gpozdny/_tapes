@@ -1,0 +1,92 @@
+.footer {
+    background-image: linear-gradient(345deg, #3d2baa, #3d2baa);
+        &__text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        &__subscription {
+            padding-top: 20px;
+        }
+        &__form {
+            margin-bottom: 20px;
+        }
+        &__form-wrap {
+            @include flex(row);
+        }
+        &__input {
+            margin-right: 5px;
+            max-width: 214px;
+            padding: 20px 20px;
+            background-color: rgba(0, 0, 0, 0.24);
+            border: 0;
+            color: white;
+            margin-bottom: 10px;
+        }
+        &__btn {
+            border: solid 1px #ffffff;
+            background: transparent;
+        }
+        &__warning {
+            font-family: 'Roboto', sans-serif;
+            opacity: 0.7;
+            font-size: 10px;
+            color: white;
+                a {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 10px;
+                    color: white;
+                    text-decoration: underline;
+                }
+        }
+        &__credentials {
+            @include flex(column);
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+        &__phone {
+            color: white;
+        }
+        &__address {
+            font-size: 14px;
+            color: white;
+        }
+        &__nav {
+            padding-bottom: 30px;
+        }
+        &__item {
+            margin-bottom: 10px;
+        }
+        &__link {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            text-decoration: underline;
+        }
+        &__heading {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            a {
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                font-weight: normal;
+                text-decoration: underline;
+            }
+        }
+        &__bottom {
+            border-top:solid 1px rgba(255, 255, 255, 0.38);
+            padding: 10px 0;
+        }
+        &__copyright {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 12px;
+                a {
+                    font-family: 'Roboto', sans-serif;
+                    color: white;
+                    font-size: 12px;
+                    text-decoration: underline;
+                }
+        }
+}
