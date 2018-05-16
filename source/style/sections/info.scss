@@ -2,15 +2,23 @@
     position: relative;
     padding-top: 40px;
     padding-bottom: 65px;
+    @include xs {
+        padding-top: 70px;
+    }
         &__text {
             margin-bottom: 30px;
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             color: $text-colour;
+            @include xs {
+                font-size: 18px;
+            }
         }
         &__wrap {
             position: relative;
             padding-left: 9px;
+            @include xs {
+                padding-left: 28px;
+            }
                 &:before {
                     content: "";
                     position: absolute;
@@ -19,19 +27,28 @@
                     width: 3px;
                     height: 100%;
                     background-color: #f57323;
+                    @include xs {
+                        width: 8px;
+                    }
                 }
         }
         &__title {
-            font-family: 'Rubik', sans-serif;
+            font-family: $title-font;
+            font-weight: normal;
             font-size: 18px;
             margin: 0 0 10px 0;
+            @include xs {
+                font-size: 36px;
+            }
         }
         &__desc {
             display: none;
         }
         &__warning {
-            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             color: $text-colour;
+            @include xs {
+                font-size: 18px;
+            }
         }
 }

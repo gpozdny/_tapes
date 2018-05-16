@@ -1,7 +1,12 @@
 .desc {
+    @include flex(column);
+    align-items: flex-start;
     position: relative;
+    @include xs {
+        width: 60%;
+        max-width: 330px;
+    }
     &__info {
-        font-family: 'Roboto', sans-serif;
         font-size: 14px;
         line-height: 1.29;
         color: $text-colour;
@@ -9,17 +14,20 @@
     }
     &__list {
         padding-left:20px;
+        margin-bottom: 30px;
+            li + li {
+                margin-top: 10px;
+            }
     }
     &__item {
         display: block;
         position: relative;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         color: $text-colour;
-        font-family: 'Roboto', sans-serif;
         font-size: 14px;
-            &:last-child {
-                margin-bottom: 30px;
-            }
+            // &:last-child {
+            //     margin-bottom: 0;
+            // }
             &:before {
                 content: "";
                 position: absolute;
@@ -40,7 +48,6 @@
         margin-bottom: 35px;
     }
     &__link {
-        font-family: 'Roboto', sans-serif;
         font-size: 16px;
         color: $text-colour;
     }

@@ -1,7 +1,8 @@
 .map {
     position: relative;
+    min-height: 400px;
         &__heading {
-            font-family: 'Rubik', sans-serif;
+            font-family: $title-font;
             font-size: 20px;
             margin-bottom: 15px;
             color: $text-colour;
@@ -11,7 +12,6 @@
             display: none;
         }
         &__trigger {
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             color: $text-colour;
             border-bottom: 1px dashed rgba(61, 43, 170, 0.3)

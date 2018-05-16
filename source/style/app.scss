@@ -1,11 +1,13 @@
 // vars
 
-$main-colour: #004C97;
-$main-white: #F9FAFC;
+// colours
+
 $text-colour: black;
-$bottom-colour: #C4C9CD;
-$bg-colour: #EFF2F5;
-$stripe-colour: rgba(24, 24, 24, 0.1);
+
+// fonts
+
+$text-font: 'Roboto-light', sans-serif;
+$title-font: 'Rubik-Regular', sans-serif;
 
 // adjustments
 
@@ -14,10 +16,12 @@ $stripe-colour: rgba(24, 24, 24, 0.1);
 
 
 // sections
+
 @import 'sections/header.scss';
+@import 'sections/logo.scss';
 @import 'sections/desc.scss';
 @import 'sections/info.scss';
-@import 'sections/tape-types.scss';
+@import 'sections/tapes.scss';
 @import 'sections/contacts.scss';
 @import 'sections/quality.scss';
 @import 'sections/map.scss';
@@ -28,6 +32,7 @@ $stripe-colour: rgba(24, 24, 24, 0.1);
 
 // fonts
 
+@import 'fonts.scss';
 
 
 

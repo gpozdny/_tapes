@@ -5,22 +5,44 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 610px;
     &__wrapper {
         @include flex(row);
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 35px;
+        z-index: 1;
     }
     &__nav, &__lang {
         display: none;
     }
+    &__info {
+        @include flex(row);
+    }
+    &__lang {
+        font-size: 16px;
+        a + a {
+            margin-left: 5px;
+        }
+        @include xs {
+            @include flex(row);
+            justify-content: center;
+            align-items: center;
+        }
+    }
     &__logo {
         width: 10%;
+        @include xs {
+            width: 33%;
+        }
     }
     &__credentials {
         @include flex(column);
-        font-family: 'Roboto', sans-serif;
+        font-family: $text-font;
         font-size: 16px;
+        @include xs {
+            margin-right: 60px;
+        }
     }
     &__phone {
         color: $text-colour;
@@ -31,7 +53,27 @@
         color: $text-colour;
     }
     &__menu {
+        @include flex(column);
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
+        div + div {
+            margin-top: 5px;
+        }
+    }
+    &__bg {
+        display: none;
+        line-height: 0;
+        position: absolute;
+        @include xs {
+            display: block;
+            width: 770px;
+            left: 19%;
+            top: -85px;
+        }
+    }
+    &__image {
+        
     }
 }
 
@@ -39,5 +81,4 @@
     width: 20px;
     height: 2px;
     background-color: black;
-    margin: 5px 0;
 }

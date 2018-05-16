@@ -2,19 +2,33 @@
     position: relative;
     padding-bottom: 50px;
     &__heading {
-        font-family: 'Rubik', sans-serif;
+        font-family: $title-font;
         font-size: 20px;
         margin-bottom: 15px;
         color: $text-colour;
         font-weight: normal;
+        @include xs {
+            max-width: 200px;
+            margin: 0;
+        }
     }
     &__btn {
         margin-bottom: 20px;
+        @include xs {
+            margin: 0;
+        }
     }
     &__list {
         @include flex(row);
     }
     &__link {
         display: block;
+    }
+    &__wrap {
+        @include xs {
+            @include flex(row);
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
     }
 }

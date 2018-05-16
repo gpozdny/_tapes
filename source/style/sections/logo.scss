@@ -1,0 +1,14 @@
+.logo {
+   
+    &__body-path {
+        fill: black;
+    }
+    &__word {
+        display: none;
+        @include xs {
+            display: block;
+        }
+    }
+}
+
+

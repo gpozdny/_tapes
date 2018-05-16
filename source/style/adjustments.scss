@@ -64,11 +64,16 @@
 // 	}
 // }
 
+html {
+	font-size: 14px;
+}
+
 body {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
 	position: relative;
+	font-family: $text-font;
 }
 
 body {
@@ -156,7 +161,7 @@ h1 {
 	display: block;
 	text-align: center;
 	width: 278px;
-	font-family: 'Roboto', sans-serif;
+	font-family: $text-font;
 	font-size: 16px;
 	background-color: #f57323;
 	color: white;
@@ -168,7 +173,7 @@ h1 {
 	display: block;
 	text-align: center;
 	width: 278px;
-	font-family: 'Roboto', sans-serif;
+	font-family: $text-font;
 	font-size: 16px;
 	background-color: transparent;
 	color: #f57323;
@@ -180,7 +185,7 @@ h1 {
 // heading
 
 .heading {
-	font-family: 'Rubik', sans-serif;
+	font-family: $title-font;
         font-size: 24px;
         line-height: 1.25;
 		margin-bottom: 15px;
@@ -191,7 +196,7 @@ h1 {
 // subtitle 
 
 .title {
-	font-family: 'Rubik', sans-serif;
+	font-family: $title-font;
 	font-size: 18px;
 	color: $text-colour;
 	margin: 0;

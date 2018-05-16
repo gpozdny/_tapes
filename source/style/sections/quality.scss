@@ -3,11 +3,16 @@
     padding-top: 45px;
     padding-bottom: 50px;
     background-color: #f6f6f6;
+    @include xs {
+        padding-top: 0;
+    }
     &__image {
         display: none;
+        @include xs {
+            display: block;
+        }
     }
     &__text {
-        font-family: 'Roboto', sans-serif;
         font-size: 14px;
         color: $text-colour;
     }

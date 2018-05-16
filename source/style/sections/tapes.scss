@@ -1,4 +1,4 @@
-.tape-types {
+.tapes {
     position: relative;
     overflow: hidden;
     &__heading {
@@ -30,7 +30,6 @@
         margin-bottom: 90px;
     }
     &__text {
-        font-family: 'Roboto', sans-serif;
         font-size: 14px;
         color: $text-colour;
         margin-bottom: 20px;
@@ -41,12 +40,13 @@
     &__list {
         padding-left:20px;
         margin-bottom: 40px;
+        li + li {
+            margin-top: 10px;
+        }
     }
     &__item {
         position: relative;
-        margin-bottom: 10px;
         color: $text-colour;
-        font-family: 'Roboto', sans-serif;
         font-size: 14px;
         &:before {
             content: "";

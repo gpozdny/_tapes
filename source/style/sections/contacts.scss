@@ -3,15 +3,21 @@
     padding-bottom: 35px;
     position: relative;
     background-color: #3d2baa;
+    @include xs {
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
         &__heading {
             color: white;
             font-size: 20px;
             margin: 0 0 10px 0;
         }
         &__text {
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             color: white;
+            @include xs {
+                font-size: 14px;
+            }
                 a {
                     color: white;
                     border-bottom: dashed 1px white;
@@ -22,11 +28,13 @@
             display: block;
             text-align: center;
             width: 278px;
-            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             background-color: transparent;
             color: rgba(255, 255, 255, 0.5);
             padding: 20px 0;
             border: solid 1px rgba(255, 255, 255, 0.5);
+        }
+        &__wrap, &__text {
+            max-width: 445px;
         }
 }
