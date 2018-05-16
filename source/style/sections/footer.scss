@@ -108,10 +108,11 @@
         &__copyright {
             color: white;
             font-size: 12px;
+            @include xs {
+                font-size: 14px;
+            }
                 a {
-                    
                     color: white;
-                    font-size: 12px;
                     text-decoration: underline;
                 }
         }
