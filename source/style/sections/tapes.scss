@@ -11,35 +11,56 @@
         display: none;
     }
     &__wrap {
-        // @include flex(column);
-        // @include xs {
-        //     @include flex(row);
-        // }
+        @include flex(column);
+        @include xs {
+            @include flex(row);
+        }
     }
     &__image {
         width: 100%;
         position: relative;
+        @include xs {
+            width: 42%;
+        }
         &--typography {
             img {
                 height: 490px;
                 width: auto;
                 transform: translateX(-40px);
+                @include xs {
+                    height: 555px;
+                    transform: translateX(-170px);
+                }
             }
         }
         &--aviation {
+            @include xs {
+                order: 1;
+            }
             img {
                 height: 390px;
+                @include xs {
+                    height: 523px;
+                    transform: translateX(10px);
+                }
             }
         }
         &--industrial {
             img {
                 height: 350px;
                 transform: translateX(-200px);
+                @include xs {
+                    height: 523px;
+                    transform: translateX(-500px);
+                }
             }
         }
         line-height: 0;
     }
     &__title {
+        @include xs {
+            max-width: 280px;
+        }
         &--adjusted {
             margin-top: -110px;
             @include xs {
@@ -49,6 +70,10 @@
     }
     &__link {
         margin-bottom: 90px;
+        &--aviation {
+            border-color: black;
+            color: black;
+        }
     }
     &__text {
         font-size: 14px;
