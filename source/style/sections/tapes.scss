@@ -3,27 +3,48 @@
     overflow: hidden;
     &__heading {
         margin-bottom: 45px;
+        @include xs {
+            max-width: 400px;
+        }
     }
     &__num {
         display: none;
     }
+    &__wrap {
+        // @include flex(column);
+        // @include xs {
+        //     @include flex(row);
+        // }
+    }
     &__image {
+        width: 100%;
+        position: relative;
         &--typography {
-            margin-left: -38px;
-            width: 475px;
+            img {
+                height: 490px;
+                width: auto;
+                transform: translateX(-40px);
+            }
         }
         &--aviation {
-            width: 280px;
+            img {
+                height: 390px;
+            }
         }
         &--industrial {
-            width: 475px;
-            margin-left: -183px;
+            img {
+                height: 350px;
+                transform: translateX(-200px);
+            }
         }
         line-height: 0;
     }
     &__title {
         &--adjusted {
-            margin-top: -85px;
+            margin-top: -110px;
+            @include xs {
+                margin-top: 0;
+            }
         }
     }
     &__link {

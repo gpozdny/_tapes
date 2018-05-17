@@ -140,7 +140,7 @@ p  {
 	margin: 0;
 }
 
-img {
+img:not(.tapes__picture) {
 	max-width: 100%;
 	height: auto;
 }

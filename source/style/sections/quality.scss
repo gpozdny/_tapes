@@ -10,6 +10,9 @@
         display: none;
         @include xs {
             display: block;
+            img {
+                transform: translateY(-55px);
+            }
         }
     }
     &__text {
