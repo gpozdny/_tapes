@@ -41,7 +41,7 @@
                 height: 390px;
                 @include xs {
                     height: 523px;
-                    transform: translateX(10px);
+                    transform: translateX(40px);
                 }
             }
         }
@@ -79,6 +79,9 @@
         font-size: 14px;
         color: $text-colour;
         margin-bottom: 20px;
+        @include xs {
+            max-width: 280px;
+        }
     }
     &__info {
         display: none;
