@@ -2,6 +2,8 @@
     background-image: linear-gradient(345deg, #3d2baa, #3d2baa);
         &__text {
             font-size: 14px;
+            min-width: 280px;
+            width: 80%;
             color: white;
             margin-bottom: 20px;
             @include xs {
@@ -23,7 +25,8 @@
         }
         &__input {
             margin-right: 5px;
-            width: 214px;
+            min-width: 214px;
+            width: calc(100% - 60px);
             padding: 20px 20px;
             background-color: rgba(0, 0, 0, 0.24);
             border: 0;
@@ -72,11 +75,10 @@
             color: white;
         }
         &__nav {
-            @include flex(column);
+            @include flex(row);
+            justify-content: space-between;
+            flex-wrap: wrap;
             padding-bottom: 30px;
-            @include xs {
-                @include flex(row);
-            }
         }
         &__list {
             &--nav {

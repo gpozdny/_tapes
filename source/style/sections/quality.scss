@@ -12,6 +12,8 @@
             display: block;
             img {
                 transform: translateY(-55px);
+                max-width: 100%;
+                height: auto;
             }
         }
     }

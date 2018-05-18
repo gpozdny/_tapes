@@ -1,10 +1,23 @@
 .desc {
-    @include flex(column);
-    align-items: flex-start;
     position: relative;
-    @include xs {
-        width: 60%;
-        max-width: 330px;
+    background-image: url('../img/pics/yellow.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__container {
+        @include flex(column);
+        padding-top: 90px;
+        padding-bottom: 55px;
+    }
+    &__heading,
+    &__info,
+    &__list {
+        width: 70%;
+        min-width: 280px;
+        @include xs {
+            width: 60%;
+            max-width: 330px;
+        }
     }
     &__info {
         font-size: 14px;
@@ -22,12 +35,8 @@
     &__item {
         display: block;
         position: relative;
-        // margin-bottom: 10px;
         color: $text-colour;
         font-size: 14px;
-            // &:last-child {
-            //     margin-bottom: 0;
-            // }
             &:before {
                 content: "";
                 position: absolute;
@@ -43,12 +52,37 @@
         @include flex(column);
         align-items: center;
         justify-content: center;
+        @include xs {
+            width: 50%;
+        }
     }
     &__btn {
         margin-bottom: 35px;
+        @include xs {
+            min-width: 255px;
+        }
     }
     &__link {
         font-size: 16px;
         color: $text-colour;
+    }
+    &__tape {
+        display: none;
+        pointer-events: none;
+        line-height: 0;
+        overflow: hidden;
+        position: absolute;
+        @include xs {
+            display: block;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__image {
+        float: right;
+        height: 700px;
+        width: auto;
+        transform: translate(270px, -48px);
     }
 }

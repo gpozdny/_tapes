@@ -8,6 +8,10 @@
         &__top {
             line-height: 0;
             background-color: rgba(61, 43, 170, 0.7);
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
         }
         &__middle {
             padding: 0 10px 25px 10px;

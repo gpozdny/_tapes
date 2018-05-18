@@ -14,6 +14,7 @@
     }
     &__btn {
         margin-bottom: 20px;
+        width: initial;
         @include xs {
             margin: 0;
         }
