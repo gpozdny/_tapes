@@ -10,13 +10,20 @@
             margin-bottom: 30px;
             font-size: 16px;
             color: $text-colour;
+            width: 70%;
+            min-width: 280px;
             @include xs {
                 font-size: 18px;
+            }
+            @include s {
+                width: 100%;
             }
         }
         &__wrap {
             position: relative;
             padding-left: 9px;
+            width: 70%;
+            min-width: 280px;
             @include xs {
                 padding-left: 28px;
             }
@@ -41,6 +48,9 @@
             @include xs {
                 font-size: 36px;
             }
+            @include s {
+                margin-bottom: 0;
+            }
         }
         &__desc {
             display: none;
@@ -50,6 +60,7 @@
             color: $text-colour;
             @include xs {
                 font-size: 18px;
+                line-height: 1.11;
             }
         }
 }

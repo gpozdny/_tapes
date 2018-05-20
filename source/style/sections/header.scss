@@ -28,6 +28,9 @@
             justify-content: center;
             align-items: center;
         }
+        &-link {
+            color: $text-colour;
+        }
     }
     &__logo {
         width: 15%;
@@ -42,9 +45,18 @@
         @include xs {
             margin-right: 60px;
         }
+        @include s {
+            @include flex(row);
+            align-items: center;
+        }
     }
     &__phone {
         color: $text-colour;
+        @include s {
+            @include flex(row);
+            align-items: center;
+            margin-right: 5px;
+        }
     }
     &__address {
         opacity: 0.5;

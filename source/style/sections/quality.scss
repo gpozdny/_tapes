@@ -6,14 +6,20 @@
     @include xs {
         padding-top: 0;
     }
+    &__desc {
+        @include xs {
+            max-width: 430px;
+        }
+    }
     &__image {
         display: none;
         @include xs {
             display: block;
+            width: 100%;
             img {
                 transform: translateY(-55px);
                 max-width: 100%;
-                height: auto;
+                height: 350px;
             }
         }
     }

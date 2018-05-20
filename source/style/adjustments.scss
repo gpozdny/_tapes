@@ -169,6 +169,9 @@ h1 {
 	color: white;
 	padding: 20px 0;
 	border: solid 1px transparent;
+		@include xs {
+			min-width: 230px;
+		}
 }
 
 .btn--reverse {
@@ -182,6 +185,9 @@ h1 {
 	color: #f57323;
 	padding: 20px 0;
 	border: solid 1px #f57323;
+	@include xs {
+		min-width: 230px;
+	}
 }
 
 

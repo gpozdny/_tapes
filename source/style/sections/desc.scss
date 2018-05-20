@@ -8,6 +8,10 @@
         @include flex(column);
         padding-top: 90px;
         padding-bottom: 55px;
+        align-items: center;
+         @include xs {
+            align-items: flex-start;
+         }
     }
     &__heading,
     &__info,
@@ -18,12 +22,26 @@
             width: 60%;
             max-width: 330px;
         }
+        @include s {
+            width: 65%;
+            max-width: 460px;
+        }
+    }
+    &__heading {
+        @include s {
+            font-size: 36px;
+            line-height: 1.11;
+        }
     }
     &__info {
         font-size: 14px;
         line-height: 1.29;
         color: $text-colour;
         margin-bottom: 20px;
+        @include s {
+            font-size: 16px;
+            max-width: 425px;;
+        }
     }
     &__list {
         padding-left:20px;
@@ -37,6 +55,9 @@
         position: relative;
         color: $text-colour;
         font-size: 14px;
+            @include s {
+                font-size: 16px;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -55,11 +76,20 @@
         @include xs {
             width: 50%;
         }
+        @include s {
+            width: 65%;
+            @include flex(row);
+            justify-content: flex-start;
+            align-items: baseline;
+        }
     }
     &__btn {
         margin-bottom: 35px;
         @include xs {
             min-width: 255px;
+        }
+        @include s {
+           margin-right: 50px;
         }
     }
     &__link {
