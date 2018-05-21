@@ -7,34 +7,66 @@
         padding-top: 50px;
         padding-bottom: 45px;
     }
-        &__heading {
-            color: white;
-            font-size: 20px;
-            margin: 0 0 10px 0;
+    @include s {
+        font-size: 30px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    &__heading {
+        color: white;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        @include s {
+            font-size: 30px;
         }
-        &__text {
-            font-size: 16px;
-            color: white;
-            @include xs {
-                font-size: 14px;
-            }
-                a {
-                    color: white;
-                    border-bottom: dashed 1px white;
-                }
-        }
-        &__btn {
-            margin: 20px 0;
-            display: block;
-            text-align: center;
-            width: 278px;
+    }
+    &__wrap {
+        width: 100%;
+        @include flex(row);
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+    &__text {
+        font-size: 16px;
+        color: white;
+        @include xs {
             font-size: 14px;
-            background-color: transparent;
-            color: rgba(255, 255, 255, 0.5);
-            padding: 20px 0;
-            border: solid 1px rgba(255, 255, 255, 0.5);
         }
-        &__wrap, &__text {
-            max-width: 445px;
+        a {
+            color: white;
+            border-bottom: dashed 1px white;
         }
+        @include s {
+            font-size: 16px;
+        }
+    }
+    &__btn {
+        margin: 20px 0;
+        display: block;
+        text-align: center;
+        width: 278px;
+        font-size: 14px;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 20px 0;
+        border: solid 1px rgba(255, 255, 255, 0.5);
+        @include s {
+            font-size: 16px;
+            width: 340px;
+        }
+    }
+    &__info,
+    &__text {
+        max-width: 445px;
+    }
+    &__info {
+        @include s {
+            max-width: 350px;
+        }
+    }
+    &__text--adjusted {
+        @include s {
+            max-width: 290px;
+        }
+    }
 }
