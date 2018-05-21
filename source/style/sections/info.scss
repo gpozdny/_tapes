@@ -21,6 +21,9 @@
             @include s {
                 width: 100%;
             }
+            @include sm {
+                max-width: 510px;
+            }
         }
         &__wrap {
             position: relative;
@@ -29,6 +32,9 @@
             min-width: 280px;
             @include xs {
                 padding-left: 28px;
+            }
+            @include sm {
+                min-width: 760px;
             }
                 &:before {
                     content: "";

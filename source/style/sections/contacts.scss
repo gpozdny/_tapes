@@ -12,21 +12,63 @@
         padding-top: 30px;
         padding-bottom: 40px;
     }
+    @include m {
+        padding-top: 50px;
+        padding-bottom: 55px;
+    }
+    @include l {
+        padding-top: 75px;
+        padding-bottom: 70px;
+    }
+    @include xl {
+        padding-top: 125px;
+        padding-bottom: 120px;
+    }
+    &__container {
+        @include m {
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
     &__heading {
         color: white;
         font-size: 20px;
         margin: 0 0 10px 0;
+        @include xs {
+            font-size: 18px;
+        }
         @include s {
             font-size: 30px;
         }
+        @include m {
+            font-size: 36px;
+            width: 100%;
+            max-width: 610px;
+        }
+        @include l {
+            margin: 0 135px 20px 0;
+        }
+        @include xl {
+            margin-right: 295px;
+        }
     }
     &__wrap {
-        width: 100%;
+        // width: 100%;
         @include flex(row);
         flex-wrap: wrap;
-        justify-content:space-between;
+        // justify-content:space-between;
         @include s {
             flex-wrap: nowrap;
+        }
+        @include m {
+            @include flex(column);
+            max-width: 610px;
+        }
+        @include l {
+            margin-right: 135px;
+        }
+        @include xl {
+            margin-right: 295px;
         }
     }
     &__text {
@@ -41,6 +83,9 @@
         }
         @include s {
             font-size: 16px;
+        }
+        @include m {
+            font-size: 18px;
         }
     }
     &__btn {
@@ -58,19 +103,26 @@
             width: 340px;
         }
     }
-    &__info,
-    &__text {
-        max-width: 445px;
-    }
-    &__text--adjusted {
-        @include s {
-            max-width: 400px;
-        }
-    }
     &__info {
         @include s {
             margin-right: 40px;
             max-width: 445px;
         }
     }
+    &__info,
+    &__text {
+        max-width: 445px;
+            @include m {
+                max-width: 100%;
+            }
+    }
+    &__text--adjusted {
+        @include s {
+            max-width: 400px;
+        }
+        @include m {
+            max-width: 100%;
+        }
+    }
+
 }

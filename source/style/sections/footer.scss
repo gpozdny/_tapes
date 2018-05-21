@@ -115,12 +115,15 @@
         &--nav {
             margin-bottom: 30px;
             margin-right: 60px;
+                @include sm {
+                    margin-right: 75px;
+                }
         }
         &--adjusted {
-            margin-right: 35px;
-        }
-        &--font {
-  
+            margin-right: 70px;
+            @include s {
+                margin-right: 30px;
+            }
         }
     }
     &__item {
@@ -130,6 +133,9 @@
         color: white;
         text-decoration: underline;
         font-size: 16px;
+            &--adjusted {
+                font-size: 14px;
+            }
     }
     &__heading {
         margin-top: 0;
@@ -144,8 +150,12 @@
         @include flex(column);
     }
     &__goods {
-        @include flex(row);
-        flex-wrap: wrap;
+        @include flex(column);
+
+        @include s {
+            @include flex(row);
+            flex-wrap: wrap;
+        }
         @include sm {
             @include flex(column);
         }
