@@ -90,6 +90,7 @@
         }
         @include s {
            margin-right: 50px;
+           max-width: 270px;
         }
     }
     &__link {

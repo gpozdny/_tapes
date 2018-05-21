@@ -8,10 +8,48 @@
     }
     @include s {
         padding-top: 20px;
+        padding-bottom: 90px;
     }
     &__desc {
         @include xs {
             max-width: 430px;
+        }
+        @include s {
+            position: absolute;
+            left: 45%;
+            top: -135px;
+        }
+        @include sm {
+            max-width: 100%;
+            left: 54%;
+            top: -220px;
+        }
+        @include m {
+            top: -275px;
+        }
+        @include l {
+            left: 57%;
+            top: -470px;
+        }
+    }
+    &__heading {
+        @include xs {
+            font-size: 18px;
+        }
+        @include s {
+            font-size: 20px;
+            max-width: 370px;
+        }
+        @include sm {
+            font-size: 24px;
+            
+        }
+        @include m {
+            font-size: 36px;
+            line-height: 1.11;
+        }
+        @include l {
+            font-size: 36px;
         }
     }
     &__image {
@@ -26,11 +64,26 @@
                 @include s {
                     transform: translateY(0);
                 }
+                @include sm {
+                    height: 530px;
+                }
             }
         }
     }
     &__text {
         font-size: 14px;
         color: $text-colour;
+        @include s {
+            font-size: 16px;
+            max-width: 355px;
+        }
+        @include sm {
+            max-width: 405px;
+        }
+        @include m {
+            font-size: 18px;
+            max-width: 490px;
+        }
+  
     }
 }

@@ -25,6 +25,9 @@
         @include flex(row);
         flex-wrap: wrap;
         justify-content:space-between;
+        @include s {
+            flex-wrap: nowrap;
+        }
     }
     &__text {
         font-size: 16px;
@@ -59,14 +62,15 @@
     &__text {
         max-width: 445px;
     }
-    &__info {
-        @include s {
-            max-width: 350px;
-        }
-    }
     &__text--adjusted {
         @include s {
-            max-width: 290px;
+            max-width: 400px;
+        }
+    }
+    &__info {
+        @include s {
+            margin-right: 40px;
+            max-width: 445px;
         }
     }
 }
