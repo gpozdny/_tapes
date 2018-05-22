@@ -1,6 +1,5 @@
 .tapes {
     position: relative;
-    overflow: hidden;
     @include xs {
         background-image: url(../img/pics/yellow.jpg);
         background-repeat: no-repeat;
@@ -15,13 +14,18 @@
             left: -80px;
             width: 140%;
             transform: rotate(21deg);
-                @include s {
-                    height: 900px;
-                    top: -140px;
-                    left: -80px;
-                    width: 140%;
-                    transform: rotate(21deg);
-                }
+            @include s {
+                height: 900px;
+                top: -165px;
+                left: -80px;
+                width: 140%;
+                transform: rotate(21deg);
+            }
+            @include sm {
+                height: 950px;
+                left: -145px;
+                top: -170px;
+            }
         }
         &::after {
             content: "";
@@ -32,15 +36,24 @@
             left: -80px;
             width: 140%;
             transform: rotate(-21deg);
-                @include s {
-                    height: 890px;
-                    bottom: -100px;
-                    left: -100px;
-                    width: 140%;
-                    -ms-transform: rotate(-17deg);
-                    transform: rotate(-21deg);
-                }
+            @include s {
+                height: 890px;
+                bottom: -190px;
+                left: -100px;
+                width: 140%;
+                transform: rotate(-14deg);
+            }
+            @include sm {
+                height: 950px;
+                bottom: -115px;
+            }
         }
+    }
+    @include sm {
+        padding-top: 100px;
+    }
+    @include m {
+        padding-top: 205px;
     }
     &__heading {
         margin-bottom: 45px;
@@ -53,11 +66,40 @@
         @include s {
             font-size: 30px;
             max-width: 100%;
-            margin-left: 30%;
+            margin-left: 28%;
         }
+        @include sm {
+            max-width: 480px;
+            margin-left: 430px;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        @include m {
+            font-size: 36px;
+            max-width: 590px;
+            margin-left: 555px;
+            margin-bottom: 40px;
+
+        }
+    }
+    &__num-wrap {
+        position: relative;
     }
     &__num {
         display: none;
+            @include m {
+                display: inline-block;
+                position: absolute;
+                left: -50px;
+                top: -110px;
+                font-family: Georgia;
+                color: rgba(61,43,170,.1);
+                font-size: 250px;
+                    &--adjusted {
+                        left: -70px;
+                        top: -190px;
+                    }
+            }
     }
     &__wrap {
         position: relative;
@@ -65,7 +107,6 @@
         @include flex(column);
         @include xs {
             @include flex(row);
-            justify-content: space-around;
             align-items: flex-start;
         }
     }
@@ -73,8 +114,7 @@
         min-width: 280px;
         z-index: 1;
         @include xs {
-            max-width: 280px;
-            // padding-right: 40px;
+            max-width: 280px; // padding-right: 40px;
             &--typography {
                 margin-left: 230px;
                 margin-bottom: 245px;
@@ -87,18 +127,73 @@
                 margin-left: 45px;
                 margin-bottom: 175px;
             }
+            @include s {
+                max-width: 390px;
+                &--typography {
+                    margin-top: 10px;
+                    margin-left: 295px;
+                    margin-bottom: 400px;
+                }
+                &--aviation {
+                    margin-left: 5px;
+                    margin-bottom: 245px;
+                }
+                &--industrial {
+                    margin-left: 290px;
+                    margin-bottom: 95px;
+                }
+            }
+            @include sm {
+                max-width: 470px;
+                &--typography {
+                    margin-left: 430px;
+                    margin-bottom: 450px;
+                }
+                &--aviation {
+                    margin-bottom: 260px;
+                }
+                &--industrial {
+                    margin-left: 420px;
+                    margin-bottom: 155px;
+                }
+            }
+            @include m {
+                max-width: 625px;
+                &--typography {
+                    margin-left: 565px;
+                    margin-bottom: 605px;
+                }
+                &--aviation {
+                    margin-left: 50px;
+                    margin-bottom: 555px;
+                }
+                &--industrial {
+                    margin-left: 565px;
+                }
+            }
         }
     }
     &__image {
+        overflow: hidden;
         width: 100%;
-        position: relative;
+        position: relative; // overflow: hidden;
         z-index: 1;
         @include xs {
             // width: 42%;
             position: absolute;
             left: 0;
+            top: 0;
         }
         &--typography {
+            @include s {
+                top: -145px;
+            }
+            @include sm {
+                top: -215px;
+            }
+            @include m {
+                top: -365px;
+            }
             img {
                 height: 490px;
                 width: auto;
@@ -109,13 +204,30 @@
                 }
                 @include s {
                     height: 900px;
-                    transform: translate(-380px, -135px);
+                    transform: translateX(-360px);
+                }
+                @include sm {
+                    height: 950px;
+                    transform: translateX(-275px);
+                }
+                @include m {
+                    height: 1390px;
+                    transform: translateX(-475px);
                 }
             }
         }
         &--aviation {
             @include xs {
                 order: 1;
+            }
+            @include s {
+                top: -160px;
+            }
+            @include sm {
+                top: -150px;
+            }
+            @include m {
+                top: -305px;
             }
             img {
                 height: 390px;
@@ -125,22 +237,49 @@
                 }
                 @include s {
                     height: 900px;
-                    transform: translate(15px, -170px);
+                    transform: translateX(450px);
+                }
+                @include sm {
+                    height: 815px;
+                    transform: translateX(540px);
+                }
+                @include m {
+                    height: 1250px;
+                    transform: translateX(859px);
                 }
             }
         }
         &--industrial {
+            @include xs {
+                top: -60px;
+            }
+            @include s {
+                top: -120px;
+            }
+            @include sm {
+                top: -155px;
+            }
+            @include m {
+                top: -335px;
+            }
             img {
                 height: 350px;
                 transform: translateX(-200px);
                 @include xs {
                     height: 490px;
-                    transform: translate(-440px, -60px);
+                    transform: translateX(-440px);
                 }
                 @include s {
                     height: 660px;
-
-                    transform: translateX(-650px);
+                    transform: translateX(-615px);
+                }
+                @include sm {
+                    height: 760px;
+                    transform: translateX(-604px);
+                }
+                @include m {
+                    height: 1225px;
+                    transform: translateX(-1130px);
                 }
             }
         }
@@ -152,13 +291,21 @@
         }
         @include s {
             font-size: 21px;
+            line-height: 1.14;
             max-width: 705px;
+            margin-bottom: 20px;
+        }
+        @include sm {
+            font-size: 24px;
         }
         &--adjusted {
             margin-top: -110px;
             @include xs {
                 margin-top: 60px;
             }
+        }
+        @include m {
+            font-size: 36px;
         }
     }
     &__link {
@@ -175,21 +322,109 @@
         font-size: 14px;
         color: $text-colour;
         margin-bottom: 30px;
-        @include xs {
-            max-width: 390px;
-        }
         @include s {
             font-size: 16px;
+            line-height: 1.25;
+        }
+        @include sm {
+            margin-bottom: 50px;
+        }
+    }
+    &__desc {
+        display: none;
+        position: relative;
+        @include s {
+            display: block;
+            font-size: 14px;
+            &--typography {
+                margin-top: 70px;
+                max-width: 275px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 407px;
+                    left: -130px;
+                    top: -5px;
+                    background-color: rgba(2, 5, 44, 0.5);
+                    @include m {
+                        width: 545px;
+                        left: -270px;
+                    }
+                }
+                @include m {
+                    margin-top: 195px;
+                    margin-left: 100px;
+                }
+            }
+            &--aviation {
+                margin-top: 85px;
+                max-width: 255px;
+                span {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        height: 1px;
+                        width: 660px;
+                        left: 0px;
+                        top: -5px;
+                        background-color: rgba(2, 5, 44, 0.5);
+                        @include m {
+                            width: 462px;
+                        }
+                    }
+                    &:last-child {
+                        &:before {
+                            width: 372px;
+                        }
+                    }
+                }
+                @include sm {
+                    margin-top: 50px;
+                }
+                @include m {
+                    margin-top: 140px;
+                    margin-left: 410px;
+                }
+            }
+            &--industrial {
+                margin-top: 70px;
+                max-width: 275px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 390px;
+                    left: -160px;
+                    top: -5px;
+                    background-color: rgba(2, 5, 44, 0.5);
+                }
+            }
         }
     }
     &__info {
-        display: none;
+        position: relative;
+        display: inline-block;
+        color: rgba(2, 5, 44, 0.5);
+        line-height: 1.14;
+        &--aviation {
+            margin-bottom: 60px;
+            @include m {
+                margin-bottom: 90px;
+            }
+        }
     }
     &__list {
         padding-left: 20px;
         margin-bottom: 40px;
         li+li {
             margin-top: 10px;
+        }
+        @include m {
+            max-height: 100px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
     }
     &__item {
