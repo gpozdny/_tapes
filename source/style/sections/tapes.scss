@@ -8,13 +8,13 @@
         background-position: center; // white bg
         &::before {
             content: "";
-            height: 630px;
+            height: 700px;
             position: absolute;
             background-color: #fff;
-            top: -80px;
+            top: -95px;
             left: -80px;
             width: 140%;
-            transform: rotate(17deg);
+            transform: rotate(21deg);
                 @include s {
                     height: 900px;
                     top: -140px;
@@ -25,13 +25,13 @@
         }
         &::after {
             content: "";
-            height: 630px;
+            height: 680px;
             position: absolute;
             background-color: #fff;
-            bottom: -100px;
+            bottom: -85px;
             left: -80px;
             width: 140%;
-            transform: rotate(-17deg);
+            transform: rotate(-21deg);
                 @include s {
                     height: 890px;
                     bottom: -100px;
@@ -70,11 +70,23 @@
         }
     }
     &__container {
-        width: 70%;
         min-width: 280px;
         z-index: 1;
         @include xs {
-            width: auto;
+            max-width: 280px;
+            // padding-right: 40px;
+            &--typography {
+                margin-left: 230px;
+                margin-bottom: 245px;
+            }
+            &--industrial {
+                margin-left: 230px;
+                margin-bottom: 165px;
+            }
+            &--aviation {
+                margin-left: 45px;
+                margin-bottom: 175px;
+            }
         }
     }
     &__image {
@@ -82,7 +94,9 @@
         position: relative;
         z-index: 1;
         @include xs {
-            width: 42%;
+            // width: 42%;
+            position: absolute;
+            left: 0;
         }
         &--typography {
             img {
@@ -90,7 +104,7 @@
                 width: auto;
                 transform: translateX(-40px);
                 @include xs {
-                    height: 510px;
+                    height: 600px;
                     transform: translateX(-170px);
                 }
                 @include s {
@@ -106,8 +120,8 @@
             img {
                 height: 390px;
                 @include xs {
-                    height: 460px;
-                    transform: translateX(40px);
+                    height: 535px;
+                    transform: translateX(365px);
                 }
                 @include s {
                     height: 900px;
@@ -120,8 +134,8 @@
                 height: 350px;
                 transform: translateX(-200px);
                 @include xs {
-                    height: 460px;
-                    transform: translateX(-440px);
+                    height: 490px;
+                    transform: translate(-440px, -60px);
                 }
                 @include s {
                     height: 660px;
@@ -143,7 +157,7 @@
         &--adjusted {
             margin-top: -110px;
             @include xs {
-                margin-top: 40px;
+                margin-top: 60px;
             }
         }
     }
@@ -160,7 +174,7 @@
     &__text {
         font-size: 14px;
         color: $text-colour;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         @include xs {
             max-width: 390px;
         }
