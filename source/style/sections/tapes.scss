@@ -1,3 +1,52 @@
+.test {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    &::before {
+        content: "";
+        height: 700px;
+        position: absolute;
+        background-color: #fff;
+        top: -95px;
+        left: -80px;
+        width: 140%;
+        transform: rotate(21deg);
+        @include s {
+            height: 900px;
+            top: -165px;
+            left: -80px;
+            width: 140%;
+            transform: rotate(21deg);
+        }
+        @include sm {
+            height: 950px;
+            left: -145px;
+            top: -170px;
+        }
+    }
+    &::after {
+        content: "";
+        height: 680px;
+        position: absolute;
+        background-color: #fff;
+        bottom: -85px;
+        left: -80px;
+        width: 140%;
+        transform: rotate(-21deg);
+        @include s {
+            height: 890px;
+            bottom: -190px;
+            left: -100px;
+            width: 140%;
+            transform: rotate(-14deg);
+        }
+        @include sm {
+            height: 950px;
+            bottom: -115px;
+        }
+    }
+}
 .tapes {
     position: relative;
     @include xs {
@@ -5,56 +54,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; // white bg
-        &::before {
-            content: "";
-            height: 700px;
-            position: absolute;
-            background-color: #fff;
-            top: -95px;
-            left: -80px;
-            width: 140%;
-            transform: rotate(21deg);
-            @include s {
-                height: 900px;
-                top: -165px;
-                left: -80px;
-                width: 140%;
-                transform: rotate(21deg);
-            }
-            @include sm {
-                height: 950px;
-                left: -145px;
-                top: -170px;
-            }
-        }
-        &::after {
-            content: "";
-            height: 680px;
-            position: absolute;
-            background-color: #fff;
-            bottom: -85px;
-            left: -80px;
-            width: 140%;
-            transform: rotate(-21deg);
-            @include s {
-                height: 890px;
-                bottom: -190px;
-                left: -100px;
-                width: 140%;
-                transform: rotate(-14deg);
-            }
-            @include sm {
-                height: 950px;
-                bottom: -115px;
-            }
-        }
+        
     }
-    @include sm {
-        padding-top: 100px;
-    }
-    @include m {
-        padding-top: 205px;
-    }
+    // @include sm {
+    //     padding-top: 100px;
+    // }
+    // @include m {
+    //     padding-top: 205px;
+    // }
     &__heading {
         margin-bottom: 45px;
         width: 70%;
