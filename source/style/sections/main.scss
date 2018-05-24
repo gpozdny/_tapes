@@ -1,0 +1,295 @@
+.main {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/pics/yellow.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include sm {
+        padding-bottom: 50px;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 140%;
+            height: 590px;
+            background-color: #fff;
+            transform-origin: 0 0;
+            transform: rotate(19deg);
+            @include m {
+                bottom: 105px;
+                height: 666px;
+                transform: rotate(14deg)
+            }
+            @include l {
+                height: 750px;
+                bottom: 70px;
+            }
+            @include xl {
+                height: 880px;
+                bottom: 90px;
+            }
+        }
+    }
+    @include xl {
+        padding-bottom: 160px;
+    }
+    &__container {
+        @include flex(column);
+        padding-top: 90px;
+        padding-bottom: 55px;
+        align-items: center;
+        @include xs {
+            align-items: flex-start;
+            padding-top: 100px;
+        }
+        @include sm {
+            padding-bottom: 15px;
+        }
+        @include m {
+            padding-top: 130px;
+            padding-bottom: 0;
+        }
+        @include l {
+            padding-top: 155px;
+            padding-left: 135px;
+            padding-right: 135px;
+        }
+        @include xl {
+            padding-left: 115px;
+            padding-left: 115px;
+        }
+    }
+    &__heading,
+    &__info,
+    &__list {
+        width: 70%;
+        min-width: 280px;
+        @include xs {
+            width: 60%;
+            max-width: 330px;
+        }
+        @include s {
+            width: 65%;
+            max-width: 460px;
+        }
+        @include m {
+            max-width: 620px;
+        }
+        @include l {
+            max-width: 820px;
+        }
+    }
+    &__heading {
+        @include s {
+            font-size: 36px;
+            line-height: 1.11;
+        }
+        @include m {
+            font-size: 48px;
+        }
+        @include l {}
+    }
+    &__info {
+        font-size: 14px;
+        line-height: 1.29;
+        color: $text-colour;
+        margin-bottom: 20px;
+        @include s {
+            font-size: 16px;
+            max-width: 425px;
+        }
+        @include l {
+            max-width: 610px;
+        }
+    }
+    &__list {
+        padding-left: 20px;
+        margin-bottom: 30px;
+        li+li {
+            margin-top: 10px;
+        }
+        @include l {
+            margin-bottom: 60px;
+        }
+        @include xl {
+            margin-bottom: 40px;
+        }
+    }
+    &__item {
+        display: block;
+        position: relative;
+        color: $text-colour;
+        font-size: 14px;
+        @include s {
+            font-size: 16px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: -15px;
+            top: 6px;
+            border-radius: 50%;
+            background-color: #02052c;
+        }
+    }
+    &__options {
+        z-index: 1;
+        @include flex(column);
+        align-items: center;
+        justify-content: center;
+        @include xs {
+            width: 50%;
+        }
+        @include s {
+            width: 65%;
+            @include flex(row);
+            justify-content: flex-start;
+            align-items: baseline;
+        }
+    }
+    &__button {
+        margin-bottom: 35px;
+        @include xs {
+            min-width: 255px;
+        }
+        @include s {
+            margin-right: 50px;
+            max-width: 270px;
+        }
+        @include m {
+            margin-bottom: 0;
+        }
+        @include l {
+            margin-right: 40px;
+        }
+    }
+    &__link {
+        font-size: 16px;
+        color: $text-colour;
+    }
+    &__tape {
+        display: none;
+        z-index: 2;
+        pointer-events: none;
+        line-height: 0;
+        overflow: hidden;
+        position: absolute;
+        @include xs {
+            display: block;
+            width: 100%;
+            left: 0;
+            top: -39px;
+            &--black {
+                display: none;
+            }
+        }
+        @include sm {
+            top: -110px;
+            &--black {
+                display: block;
+            }
+        }
+        @include m {
+            top: 145px;
+        }
+        @include l {
+            top: 85px;
+        }
+        @include xl {
+            top: 190px;
+        }
+        &--black {
+            @include sm {
+                top: -40px;
+            }
+            @include m {
+                top: 240px;
+            }
+            @include l {
+                top: 200px;
+            }
+            @include xl {
+                top: 320px;
+            }
+        }
+    }
+    &__image {
+        float: right;
+        height: 700px;
+        width: auto;
+        transform: translate(270px);
+        @include sm {
+            height: 755px;
+            transform: translate(75px);
+        }
+        @include m {
+            height: 950px;
+            transform: translate(5px);
+        }
+        @include l {
+            height: 1080px;
+            transform: translate(40px);
+        }
+        @include xl {
+            height: 1100px;
+            transform: translate(-280px);
+        }
+        &--black {
+            @include sm {
+                transform: translate(260px);
+            }
+            @include l {
+                transform: translate(330px);
+            }
+            @include xl {
+                transform: translate(0);
+            }
+        }
+    }
+    &__description {
+        display: none;
+        @include m {
+            display: block;
+            position: absolute;
+            max-width: 200px;
+            right: 45px;
+            bottom: 100px;
+            z-index: 5;
+            font-size: 14px;
+            line-height: 1.14;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 780px;
+                height: 1px;
+                top: -9px;
+                right: 20px;
+                background-color: rgba(2, 5, 44, 0.5);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 215px;
+                height: 1px;
+                top: -9px;
+                right: 20px;
+                background-color: rgba(2, 5, 44, 0.5);
+                transform-origin: 100% 100%;
+                transform: rotate(14deg);
+            }
+        }
+        @include l {
+            right: 70px;
+            bottom: 115px;
+        }
+        @include xl {
+            right: 360px;
+            bottom: 135px;
+            max-width: 225px;
+        }
+    }
+}

@@ -2,16 +2,37 @@
     position: relative;
     padding-top: 40px;
     padding-bottom: 65px;
-    z-index: 1;
+    background-color: #fff;
     @include xs {
         padding-top: 70px;
+
     }
     @include s {
         padding-bottom: 140px;
     }
+    @include sm {
+        z-index: 2;
+        background-color: transparent;
+    }
     @include m {
         padding-bottom: 240px;
     }
+    @include l {
+        padding-top: 85px;
+    }
+    @include xl {
+        padding-top: 135px;
+    }
+        &__container {
+            @include l {
+                padding-left: 135px;
+                padding-right: 135px;
+            }
+            @include xl {
+                padding-left: 115px;
+                padding-right: 115px;
+            }
+        }
         &__text {
             margin-bottom: 30px;
             font-size: 16px;
@@ -27,6 +48,14 @@
             @include sm {
                 max-width: 510px;
             }
+            @include m {
+                max-width: 455px;
+            }
+            @include l {
+                font-size: 20px;
+                margin-bottom: 40px;
+                max-width: 615px;
+            }
         }
         &__wrap {
             position: relative;
@@ -39,6 +68,12 @@
             @include sm {
                 min-width: 760px;
             }
+            @include m {
+                padding-left: 0;
+            }
+            @include l {
+                padding: 0;
+            }
                 &:before {
                     content: "";
                     position: absolute;
@@ -49,6 +84,12 @@
                     background-color: #f57323;
                     @include xs {
                         width: 8px;
+                    }
+                    @include m {
+                        left: -20px;
+                    }
+                    @include l {
+                        left: -25px;
                     }
                 }
         }
@@ -64,15 +105,15 @@
                 margin-bottom: 0;
             }
         }
-        &__desc {
-            display: none;
-        }
         &__warning {
             font-size: 14px;
             color: $text-colour;
             @include xs {
                 font-size: 18px;
                 line-height: 1.11;
+            }
+            @include m {
+                max-width: 480px;
             }
         }
 }

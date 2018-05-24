@@ -4,23 +4,64 @@
     padding: 15px 0;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 5;
     min-height: 60px;
     &__wrapper {
         @include flex(row);
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
     }
-    &__nav, &__lang {
+    &__container {
+        @include l {
+            padding: 0 60px;
+        }
+        @include xl {
+            padding: 0 40px;
+        }
+    }
+    &__nav,
+    &__lang {
         display: none;
+    }
+    &__nav {
+        @include m {
+            display: block;
+            margin-right: 20px;
+        }
+        li+li {
+            margin-left: 20px;
+        }
+    }
+    &__list {
+        @include flex(row);
+    }
+    &__nav-link {
+        font-family: 'Roboto-light';
+        color: black;
+        border-bottom: 1px solid black;
+        font-size: 16px;
+        @include l {
+            font-size: 18px;
+        }
     }
     &__info {
         flex-grow: 1;
         @include flex(row);
+        @include sm {
+            justify-content: flex-end;
+            margin-right: 50px;
+        }
+        @include m {
+            margin-right: 25px;
+        }
+        @include l {
+            margin-right: 40px;
+        }
     }
     &__lang {
-        font-size: 16px;
-        a + a {
+        
+        a+a {
             margin-left: 5px;
         }
         @include xs {
@@ -29,13 +70,22 @@
             align-items: center;
         }
         &-link {
+            font-size: 16px;
             color: $text-colour;
+            font-size: inherit;
+                @include l {
+                    font-size: 18px;
+                }
         }
     }
     &__logo {
         width: 15%;
         @include xs {
-            width: 33%;
+            width: 140px;
+            margin-right: 15px;
+        }
+        @include l {
+            margin-right: 65px;
         }
     }
     &__credentials {
@@ -43,11 +93,14 @@
         font-family: $text-font;
         font-size: 16px;
         @include xs {
-            margin-right: 60px;
+            margin-right: 95px;
         }
         @include s {
             @include flex(row);
             align-items: center;
+        }
+        @include sm {
+            margin-right: 10px;
         }
     }
     &__phone {
@@ -57,19 +110,44 @@
             align-items: center;
             margin-right: 5px;
         }
+        @include sm {
+            font-size: 20px;
+        }
+        @include l {
+            font-size: 24px;
+        }
     }
     &__address {
         opacity: 0.5;
         font-size: 10px;
         color: $text-colour;
+        @include sm {
+            font-size: 14px;
+        }
+        @include l {
+            font-size: 16px;
+        }
     }
     &__menu {
         @include flex(column);
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        div + div {
+        div+div {
             margin-top: 5px;
+        }
+        @include xs {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+        @include s {
+            // margin-right: 20px;
+        }
+        @include l {
+            width: 62px;
+            height: 62px;
         }
     }
 }
