@@ -1,5 +1,9 @@
 .map {
     position: relative;
+    overflow-x: scroll;
+    @include m {
+        overflow: auto;
+    }
     min-height: 400px;
         &__heading {
             font-family: $title-font;
@@ -7,6 +11,35 @@
             margin-bottom: 15px;
             color: $text-colour;
             font-weight: normal;
+            @include s {
+                font-size: 30px;
+            }
+            @include m {
+                font-size: 36px;
+            }
+        }
+        &__container {
+            padding-top: 40px;
+            padding-bottom: 55px;
+            @include xs {
+                padding-top: 60px;
+                padding-bottom: 95px;
+            }
+            @include sm {
+                padding-top: 110px;
+                padding-bottom: 125px;
+            }
+            @include m {
+                padding-top: 60px;
+                padding-bottom: 115px;
+            }
+            @include l {
+                padding-bottom: 130px;
+            }
+            @include xl {
+                padding-top: 150px;
+                padding-bottom: 130px;
+            }
         }
         &__places {
             display: none;
@@ -14,6 +47,26 @@
         &__trigger {
             font-size: 16px;
             color: $text-colour;
-            border-bottom: 1px dashed rgba(61, 43, 170, 0.3)
+            border-bottom: 1px dashed rgba(61, 43, 170, 0.3);
+            @include s {
+                font-size: 18px;
+            }
+        }
+        &__wrapper {
+            svg {
+                height: 475px;
+                @include xs {
+                    height: 530px;
+                }
+                @include m {
+                    height: 648px;
+                }
+                @include l {
+                    height: 700px;
+                }
+                @include xl {
+                    height: 840px;
+                }
+            }
         }
 }
