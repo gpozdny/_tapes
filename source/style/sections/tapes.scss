@@ -55,14 +55,14 @@
             transform: rotate(-14deg);
         }
         @include sm {
-            bottom: -240px;
+            bottom: -10px;
         }
         @include m {
             bottom: -115px;
             transform: rotate(-10deg);
         }
         @include xl {
-            bottom: -25px;
+            bottom: 130px;
         }
     }
 }
