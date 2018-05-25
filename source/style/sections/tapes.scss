@@ -2,66 +2,80 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    pointer-events: none;
     position: absolute;
     &::before {
         content: "";
-        height: 700px;
+        height: 800px;
         position: absolute;
         background-color: #fff;
-        top: -95px;
-        left: -80px;
-        width: 140%;
+        top: -375px;
+        left: 0;
+        width: 160%;
+        transform-origin: 0 0;
         transform: rotate(21deg);
         @include s {
-            height: 900px;
-            top: -165px;
-            left: -80px;
-            width: 140%;
+            height: 1000px;
+            top: -475px;
+            left: 0;
+            width: 160%;
+            transform-origin: 0 0;
             transform: rotate(21deg);
         }
         @include sm {
-            height: 950px;
-            left: -145px;
-            top: -170px;
+            left: 0;
+            top: -555px;
+        }
+        @include m {
+            top: -715px;
+            height: 1300px;
+        }
+        @include xl {
+            top: -950px;
+            height: 1500px;
         }
     }
     &::after {
         content: "";
-        height: 680px;
+        height: 800px;
         position: absolute;
         background-color: #fff;
         bottom: -85px;
-        left: -80px;
-        width: 140%;
+        left: 0;
+        width: 160%;
+        transform-origin: 100% 100%;
         transform: rotate(-21deg);
+        @include xs {
+            bottom: -220px;
+            transform: rotate(-17deg);
+        }
         @include s {
-            height: 890px;
-            bottom: -190px;
-            left: -100px;
-            width: 140%;
+            bottom: -360px;
+            left: 0;
             transform: rotate(-14deg);
         }
         @include sm {
-            height: 950px;
+            bottom: -240px;
+        }
+        @include m {
             bottom: -115px;
+            transform: rotate(-10deg);
+        }
+        @include xl {
+            bottom: -25px;
         }
     }
 }
+
 .tapes {
     position: relative;
     @include xs {
         background-image: url(../img/pics/yellow.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center; // white bg
-        
+        background-position: center;
+
     }
-    // @include sm {
-    //     padding-top: 100px;
-    // }
-    // @include m {
-    //     padding-top: 205px;
-    // }
     &__heading {
         margin-bottom: 45px;
         width: 70%;
@@ -86,7 +100,6 @@
             max-width: 590px;
             margin-left: 565px;
             margin-bottom: 40px;
-
         }
         @include l {
             margin-top: 110px;
@@ -94,6 +107,9 @@
         }
         @include xl {
             font-size: 48px;
+            max-width: 710px;
+            margin-top: 115px;
+            margin-left: 690px;
         }
     }
     &__num-wrap {
@@ -101,19 +117,19 @@
     }
     &__num {
         display: none;
-            @include m {
-                display: inline-block;
-                position: absolute;
-                left: -50px;
-                top: -110px;
-                font-family: Georgia;
-                color: rgba(61,43,170,.1);
-                font-size: 250px;
-                    &--adjusted {
-                        left: -70px;
-                        top: -190px;
-                    }
+        @include m {
+            display: inline-block;
+            position: absolute;
+            left: -50px;
+            top: -110px;
+            font-family: Georgia;
+            color: rgba(61, 43, 170, .1);
+            font-size: 250px;
+            &--adjusted {
+                left: -70px;
+                top: -190px;
             }
+        }
     }
     &__wrap {
         position: relative;
@@ -123,6 +139,73 @@
             @include flex(row);
             align-items: flex-start;
         }
+        @include xs {
+            &--typography {
+                margin-bottom: 255px;
+            }
+            &--aviation {
+                margin-bottom: 210px;
+            }
+            &--industrial {
+                margin-bottom: 170px;
+            }
+        }
+        @include s {
+            margin-bottom: 0;
+            &--typography {
+                margin-bottom: 535px;
+            }
+            &--aviation {
+                margin-bottom: 480px;
+            }
+            &--industrial {
+                margin-bottom: 230px;
+            }
+        }
+        @include sm {
+            &--typography {
+                margin-bottom: 580px;
+            }
+            &--aviation {
+                margin-bottom: 460px;
+            }
+            &--industrial {
+                margin-bottom: 285px;
+            }
+        }
+        @include m {
+            &--typography {
+                margin-bottom: 860px;
+            }
+            &--aviation {
+                margin-bottom: 910px;
+            }
+            &--industrial {
+                margin-bottom: 285px;
+            }
+        }
+        @include l {
+            &--typography {
+                margin-bottom: 780px;
+            }
+            &--aviation {
+                margin-bottom: 865px;
+            }
+            &--industrial {
+                margin-bottom: 285px;
+            }
+        }
+        @include xl {
+            &--typography {
+                margin-bottom: 835px;
+            }
+            &--aviation {
+                margin-bottom: 870px;
+            }
+            &--industrial {
+                margin-bottom: 245px;
+            }
+        }
     }
     &__container {
         min-width: 280px;
@@ -130,56 +213,46 @@
         @include xs {
             max-width: 280px; // padding-right: 40px;
             &--typography {
-                margin-left: 230px;
-                margin-bottom: 245px;
+                margin-left: 230px; // margin-bottom: 245px;
             }
             &--industrial {
-                margin-left: 230px;
-                margin-bottom: 165px;
+                margin-left: 230px; // margin-bottom: 165px;
             }
             &--aviation {
-                margin-left: 45px;
-                margin-bottom: 175px;
+                margin-left: 45px; // margin-bottom: 175px;
             }
             @include s {
                 max-width: 390px;
                 &--typography {
                     margin-top: 10px;
-                    margin-left: 295px;
-                    margin-bottom: 400px;
+                    margin-left: 295px; // margin-bottom: 400px;
                 }
                 &--aviation {
-                    margin-left: 5px;
-                    margin-bottom: 245px;
+                    margin-left: 5px; // margin-bottom: 245px;
                 }
                 &--industrial {
-                    margin-left: 290px;
-                    margin-bottom: 95px;
+                    margin-left: 290px; // margin-bottom: 95px;
                 }
             }
             @include sm {
                 max-width: 470px;
                 &--typography {
-                    margin-left: 430px;
-                    margin-bottom: 450px;
+                    margin-left: 430px; // margin-bottom: 450px;
                 }
                 &--aviation {
-                    margin-bottom: 260px;
+                    // margin-bottom: 260px;
                 }
                 &--industrial {
-                    margin-left: 420px;
-                    margin-bottom: 155px;
+                    margin-left: 420px; // margin-bottom: 155px;
                 }
             }
             @include m {
                 max-width: 625px;
                 &--typography {
-                    margin-left: 565px;
-                    margin-bottom: 605px;
+                    margin-left: 565px; // margin-bottom: 605px;
                 }
                 &--aviation {
-                    margin-left: 50px;
-                    margin-bottom: 555px;
+                    margin-left: 50px; // margin-bottom: 555px;
                 }
                 &--industrial {
                     margin-left: 565px;
@@ -188,14 +261,25 @@
             @include l {
                 &--typography {
                     margin-top: 65px;
-                    margin-left: 730px;
-                    margin-bottom: 505px;
+                    margin-left: 730px; // margin-bottom: 505px;
                 }
                 &--aviation {
                     margin-left: 140px;
                 }
                 &--industrial {
                     margin-left: 855px;
+                }
+            }
+            @include xl {
+                &--typography {
+                    margin-top: 5px;
+                    margin-left: 685px;
+                }
+                &--aviation {
+                    margin-left: 295px;
+                }
+                &--industrial {
+                    margin-left: 915px;
                 }
             }
         }
@@ -224,6 +308,9 @@
             @include l {
                 top: -455px;
             }
+            @include xl {
+                top: -430px;
+            }
             img {
                 height: 490px;
                 width: auto;
@@ -243,6 +330,9 @@
                 @include m {
                     height: 1390px;
                     transform: translateX(-475px);
+                }
+                @include xl {
+                    transform: translateX(-285px);
                 }
             }
         }
@@ -285,6 +375,9 @@
                     height: 1280px;
                     transform: translateX(250px);
                 }
+                @include xl {
+                    transform: translateX(125px);
+                }
             }
         }
         &--industrial {
@@ -299,6 +392,9 @@
             }
             @include m {
                 top: -335px;
+            }
+            @include xl {
+                top: -365px;
             }
             img {
                 height: 350px;
@@ -321,6 +417,9 @@
                 }
                 @include l {
                     transform: translateX(-855px);
+                }
+                @include xl {
+                    transform: translateX(-745px);
                 }
             }
         }
@@ -372,14 +471,15 @@
             margin-bottom: 50px;
         }
     }
-    &__desc {
+    &__description {
         display: none;
-        position: relative;
+        position: absolute;
         @include s {
             display: block;
             font-size: 14px;
             &--typography {
-                margin-top: 70px;
+                bottom: 290px;
+                left: 325px;
                 max-width: 275px;
                 &:before {
                     content: "";
@@ -394,13 +494,26 @@
                         left: -270px;
                     }
                 }
+                @include sm {
+                    bottom: 285px;
+                    left: 470px;
+                }
                 @include m {
-                    margin-top: 195px;
-                    margin-left: 100px;
+                    bottom: 445px;
+                    left: 725px;
+                }
+                @include l {
+                    bottom: 290px;
+                    left: 895px;
+                }
+                @include xl {
+                    bottom: 315px;
+                    left: 1030px;
                 }
             }
             &--aviation {
-                margin-top: 85px;
+                right: 475px;
+                bottom: 225px;
                 max-width: 255px;
                 span {
                     &:before {
@@ -408,7 +521,6 @@
                         position: absolute;
                         height: 1px;
                         width: 660px;
-                        left: 0px;
                         top: -5px;
                         background-color: rgba(2, 5, 44, 0.5);
                         @include m {
@@ -417,7 +529,7 @@
                     }
                     &:last-child {
                         &:before {
-                            width: 372px;
+                            width: 565px;
                             @include sm {
                                 width: 565px;
                             }
@@ -428,16 +540,41 @@
                     }
                 }
                 @include sm {
-                    margin-top: 50px;
+                    right: 730px;
+                    bottom: 215px;
                 }
                 @include m {
-                    margin-top: 140px;
-                    margin-left: 410px;
+                    right: 455px;
+                    bottom: 375px;
+                }
+                @include l {
+                    right: 720px;
+                    bottom: 385px;
+                }
+                @include xl {
+                    right: 825px;
                 }
             }
             &--industrial {
-                margin-top: 70px;
+                bottom: 125px;
+                left: 320px;
                 max-width: 275px;
+                @include sm {
+                    bottom: 160px;
+                    left: 490px;
+                }
+                @include m {
+                    bottom: 415px;
+                    left: 650px;
+                }
+                @include l {
+                    bottom: 395px;
+                    left: 925px;
+                }
+                @include xl {
+                    bottom: 385px;
+                    left: 1030px;
+                }
                 &:before {
                     content: "";
                     position: absolute;
@@ -446,6 +583,10 @@
                     left: -160px;
                     top: -5px;
                     background-color: rgba(2, 5, 44, 0.5);
+                    @include sm {
+                        width: 420px;
+                        left: -190px;
+                    }
                 }
             }
         }
@@ -456,7 +597,7 @@
         color: rgba(2, 5, 44, 0.5);
         line-height: 1.14;
         &--aviation {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             @include m {
                 margin-bottom: 90px;
             }

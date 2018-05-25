@@ -11,8 +11,23 @@
             max-width: 200px;
             margin: 0;
         }
+        @include s {
+            font-size: 30px;
+            line-height: 1.2;
+            max-width: 290px;
+        }
+        @include m {
+            max-width: 530px;
+            margin-right: 280px;
+        }
+        @include xl {
+            font-size: 36px;
+            max-width: 640px;
+            margin-bottom: 40px;
+        }
     }
-    &__btn {
+    &__button {
+        max-width: 260px;
         margin-bottom: 20px;
         width: initial;
         @include xs {
@@ -22,6 +37,12 @@
     &__list {
         @include flex(row);
     }
+    &__item {
+        transition: all 0.3s;
+        &:hover {
+            box-shadow: 20px 40px 55px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
     &__link {
         display: block;
     }
@@ -30,6 +51,13 @@
             @include flex(row);
             justify-content: space-between;
             margin-bottom: 30px;
+            align-items: center;
+            @include m {
+                align-items: baseline;
+            }
+            @include m {
+                justify-content: flex-start;
+            }
         }
     }
 }
