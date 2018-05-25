@@ -1,6 +1,9 @@
 .news {
     position: relative;
     padding-bottom: 50px;
+    &__container {
+        overflow: visible;
+    }
     &__heading {
         font-family: $title-font;
         font-size: 20px;
@@ -35,7 +38,12 @@
         }
     }
     &__list {
+        width: 100%;
+        overflow: scroll;
         @include flex(row);
+            li + li {
+                margin-left: 15px;
+            }
     }
     &__item {
         transition: all 0.3s;
