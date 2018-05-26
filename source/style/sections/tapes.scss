@@ -46,24 +46,24 @@
         transform-origin: 100% 100%;
         transform: rotate(-21deg);
         @include xs {
-            bottom: -220px;
+            top: 1065px;
             transform: rotate(-17deg);
         }
         @include s {
-            bottom: -360px;
+            top: 1520px;
             left: 0;
             transform: rotate(-14deg);
         }
         @include sm {
-            bottom: -10px;
+            top: 1370px;
         }
         @include m {
-            bottom: -115px;
+            top: 1950px;
             transform: rotate(-10deg);
         }
-        @include xl {
-            bottom: 130px;
-        }
+        // @include xl {
+        //     bottom: 130px;
+        // }
     }
 }
 
